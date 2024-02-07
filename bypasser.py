@@ -1027,7 +1027,7 @@ def shortingly(url):
 #######################################################
 # Gyanilinks - gtlinks.me
 
-def gyanilinks(url):
+'''def gyanilinks(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
     DOMAIN = "https://golink.gyanitheme.com/"
     url = url[:-1] if url[-1] == '/' else url
@@ -1043,8 +1043,9 @@ def gyanilinks(url):
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
     try: return r.json()['url']
     except: return "Something went wrong :("
+'''
 
-'''def gyanilinks(url):
+def gyanilinks(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
     DOMAIN = "https://golink.gyanitheme.com/"
     url = url[:-1] if url[-1] == '/' else url
@@ -1061,7 +1062,6 @@ def gyanilinks(url):
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
     try: return r.json()['url']
     except: return "Something went wrong :("
-'''
 
 
 
