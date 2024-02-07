@@ -2401,7 +2401,7 @@ def shortners(url):
         return tnshort(url)
 
     # tnvalue
-    elif "https://link.tnvalue.in/" in url or "https://short.tnvalue.in/" in url or "https://page.finclub.in/" in url:
+    elif "https://link.tnvalue.in/" in url or "https://short.tnvalue.in/" in url:
         print("entered tnvalue:", url)
         return tnvalue(url)
 
