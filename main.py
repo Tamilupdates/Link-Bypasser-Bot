@@ -114,19 +114,6 @@ def send_start(client: pyrogram.client.Client, message: pyrogram.types.messages_
         reply_to_message_id=message.id)
 
 
-
-from pyrogram import InlineKeyboardMarkup
-
-@app.on_message(filters.command(["start"]))
-def send_start(client, message):
-    app.send_message(
-        message.chat.id,
-        f"👋 Hi {message.from_user.mention}, I am the Link Bypasser Bot. Just send me any supported links, and I will get you results. Checkout /help to read more.",
-        reply_to_message_id=message.message_id
-    )
-
-
-
 # help command
 @app.on_message(filters.command(["help"]))
 def send_help(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
