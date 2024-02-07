@@ -2013,6 +2013,29 @@ def tnvalue(url):
         return "Something went wrong :("
 
 
+#####################################################################################################
+# indyshare
+
+def indyshare(url):
+    client = cloudscraper.create_scraper(allow_brotli=False)
+    DOMAIN = "https://indyshare.net/"
+    url = url[:-1] if url[-1] == "/" else url
+    code = url.split("/")[-1]
+    final_url = f"{DOMAIN}/{code}"
+    ref = "https://tamilkey.in/"
+    h = {"referer": ref}
+    resp = client.get(final_url, headers=h)
+    soup = BeautifulSoup(resp.content, "html.parser")
+    inputs = soup.find_all("input")
+    data = {input.get("name"): input.get("value") for input in inputs}
+    h = {"x-requested-with": "XMLHttpRequest"}
+    time.sleep(12)
+    r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
+    try:
+        return str(r.json()["url"])
+    except BaseException:
+        return "Something went wrong :("
+
 
 #####################################################################################################
 # indianshortner
@@ -2381,6 +2404,11 @@ def shortners(url):
     elif "https://link.tnvalue.in/" in url or "https://short.tnvalue.in/" in url or "https://page.finclub.in/" in url:
         print("entered tnvalue:", url)
         return tnvalue(url)
+
+    # indyshare
+    elif "https://indyshare.net/" in url:
+        print("entered indyshare:", url)
+        return indyshare(url)
 
     # indianshortner
     elif "indianshortner.in" in url:

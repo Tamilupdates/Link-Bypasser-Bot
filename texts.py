@@ -113,6 +113,7 @@ shortnertext = """__- igg-games \n\
 - onepagelink \n\
 - lolshort \n\
 - tnvalue \n\
+- indyshare \n\
 - vipurl \n\
 __"""
 
