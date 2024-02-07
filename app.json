@@ -7,7 +7,7 @@
     "bypass bot", 
     "telegram bot" 
   ],
-  "repository": "https://github.com/bipinkrish/Link-Bypasser-Bot",
+  "repository": "https://github.com/Tamilupdates/Link-Bypasser-Bot",
   "logo": "https://ibb.co/kMVxrCj",
   "env": {
     "HASH": {
@@ -75,7 +75,7 @@
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "standard-1x"
+      "size": "Basic"
     }
   }
 }
