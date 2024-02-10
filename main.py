@@ -15,7 +15,7 @@ from time import time
 
 # bot
 with open('config.json', 'r') as f: DATA = load(f)
-def getenv(var): return environ.get(var) or DATA.get(var, None)
+def getenv(var): return environ.get(var) or DATA.get(var, None) or os.environ.get(var)
 
 bot_token = os.environ.get("TOKEN")
 api_hash = os.environ.get("HASH") 
