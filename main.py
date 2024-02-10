@@ -1,5 +1,4 @@
 import pyrogram
-import os
 from pyrogram import Client,filters
 from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
 from os import environ, remove
@@ -15,11 +14,11 @@ from time import time
 
 # bot
 with open('config.json', 'r') as f: DATA = load(f)
-def getenv(var): return os.environ.get(var) or DATA.get(var, None)
+def getenv(var): return environ.get(var) or DATA.get(var, None)
 
-bot_token = os.environ.get("TOKEN")
-api_hash = os.environ.get("HASH") 
-api_id = os.environ.get("ID")
+bot_token = environ.get("TOKEN")
+api_hash = environ.get("HASH") 
+api_id = environ.get("ID")
 app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)  
 
 

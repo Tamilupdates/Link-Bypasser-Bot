@@ -12,9 +12,9 @@ try:
 
     res = rget(CONFIG_FILE_URL)
     if res.status_code == 200:
-        with open('config.env', 'wb+') as f:
+        with open('config.json', 'wb+') as f:
             f.write(res.content)
     else:
-        LOGGER.error(f"Failed to download config.env {res.status_code}")
+        LOGGER.error(f"Failed to download config.json {res.status_code}")
 except Exception as e:
     LOGGER.error(f"Error downloading CONFIG_FILE_URL: {e}")
