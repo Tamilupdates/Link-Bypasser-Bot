@@ -33,8 +33,8 @@ you can also set these in `config.json` file
 ## Commands
 
 ```
-/start - Welcome Message
-/help - List of All Supported Sites
+start - Welcome Message
+help - List of All Supported Sites
 ```
 
 ---
