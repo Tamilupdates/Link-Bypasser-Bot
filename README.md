@@ -7,7 +7,7 @@ a Telegram Bot (with Site) that can Bypass Ad Links, Generate Direct Links and J
 ## Deploy on Heroku
 **BEFORE YOU DEPLOY ON HEROKU, YOU SHOULD FORK THE REPO AND CHANGE ITS NAME TO ANYTHING ELSE**<br>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Tamilupdates/Link-Bypasser-Bot)</br>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/Tamilupdates/Link-Bypasser-Bot)</br>
 
 ## Required Variables
 
