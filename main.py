@@ -1,7 +1,7 @@
+import os
 import pyrogram
 from pyrogram import Client,filters
 from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
-import os
 from os import environ, remove
 from threading import Thread
 from json import load
