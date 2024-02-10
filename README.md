@@ -4,6 +4,11 @@ a Telegram Bot (with Site) that can Bypass Ad Links, Generate Direct Links and J
 
 ---
 
+## Deploy on Heroku
+**BEFORE YOU DEPLOY ON HEROKU, YOU SHOULD FORK THE REPO AND CHANGE ITS NAME TO ANYTHING ELSE**<br>
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Tamilupdates/Link-Bypasser-Bot)</br>
+
 ## Required Variables
 
 - `TOKEN` Bot Token from @BotFather
@@ -24,10 +29,6 @@ you can also set these in `config.json` file
 - `CLOUDFLARE` Use `cf_clearance` cookie from and Cloudflare protected sites
 - `PORT` Port to run the Bot Site on (default is 5000)
 ---
-## Deploy on Heroku
-**BEFORE YOU DEPLOY ON HEROKU, YOU SHOULD FORK THE REPO AND CHANGE ITS NAME TO ANYTHING ELSE**<br>
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Tamilupdates/Link-Bypasser-Bot)</br>
 
 ## Commands
 
