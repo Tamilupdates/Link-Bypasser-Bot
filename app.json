@@ -24,8 +24,8 @@
       "size": "Basic"
     },
     "worker": {
-          "quantity": 1,
-          "size": "Basic"
+      "quantity": 1,
+      "size": "Basic"
     }
   }
 }
