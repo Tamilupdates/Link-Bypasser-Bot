@@ -21,7 +21,11 @@
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "basic"
+      "size": "Basic"
+    },
+    "worker": {
+          "quantity": 1,
+          "size": "Basic"
     }
   }
 }
