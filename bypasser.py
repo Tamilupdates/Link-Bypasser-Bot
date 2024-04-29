@@ -2023,28 +2023,12 @@ def indyshare(url):
     code = url.split("/")[-1]
     final_url = f"{DOMAIN}/{code}"
     ref = "https://bestdjsong.com/"
-    h = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0',
-    'Accept': 'application/json, text/javascript, */*',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'X-Requested-With': 'XMLHttpRequest',
-    'Origin': ref,
-    'Connection': 'keep-alive',
-    'Referer': ref,
-    }
+    h = {"referer": ref}
     resp = client.get(final_url, headers=h)
     soup = BeautifulSoup(resp.content, "html.parser")
     inputs = soup.find_all("input")
     data = {input.get("name"): input.get("value") for input in inputs}
-    h = {
-    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:103.0) Gecko/20100101 Firefox/103.0',
-    'Accept': 'application/json, text/javascript, */*',
-    'Accept-Language': 'en-US,en;q=0.5',
-    'X-Requested-With': 'XMLHttpRequest',
-    'Origin': ref,
-    'Connection': 'keep-alive',
-    'Referer': ref,
-    }
+    h = {"x-requested-with": "XMLHttpRequest"}
     time.sleep(12)
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
     try:
