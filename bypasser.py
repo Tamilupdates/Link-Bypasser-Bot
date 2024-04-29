@@ -2016,10 +2016,6 @@ def tnvalue(url):
 #####################################################################################################
 # indyshare
 
-import time
-import cloudscraper
-from bs4 import BeautifulSoup
-
 def indyshare(url):
     client = cloudscraper.create_scraper()
     DOMAIN = "https://indyshare.net"
