@@ -2030,12 +2030,11 @@ def indyshare(url):
         'Accept-Encoding': 'gzip, deflate, br',
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'X-Requested-With': 'XMLHttpRequest',
-        'Origin': 'https:///bestdjsong.com',
+        'Referer': 'https://bestdjsong.com',
         'DNT': '1',
         'Sec-GPC': '1',
         'Alt-Used': 'indyshare.net',
         'Connection': 'keep-alive',
-        'Referer': 'https://bestdjsong.com',
         'Sec-Fetch-Dest': 'empty',
         'Sec-Fetch-Mode': 'cors',
         'Sec-Fetch-Site': 'same-origin'
@@ -2054,6 +2053,7 @@ def indyshare(url):
     except Exception as e:
         print(f"An error occurred: {e}")
         return "Something went wrong :("
+
 
 
 #####################################################################################################
