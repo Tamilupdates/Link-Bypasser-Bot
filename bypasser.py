@@ -2016,20 +2016,40 @@ def tnvalue(url):
 #####################################################################################################
 # indyshare
 
+import time
+import cloudscraper
+from bs4 import BeautifulSoup
+
 def indyshare(url):
     client = cloudscraper.create_scraper()
     DOMAIN = "https://indyshare.net"
     url = url.rstrip('/')  # Remove trailing slash if present
     code = url.split("/")[-1]
     final_url = f"{DOMAIN}/{code}"
-    ref = "https://bestdjsong.com"
-    headers = {"Referer": ref}
+    headers = {
+        'Host': 'indyshare.net',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:125.0) Gecko/20100101 Firefox/125.0',
+        'Accept': '*/*',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'X-Requested-With': 'XMLHttpRequest',
+        'Origin': 'https:///bestdjsong.com',
+        'DNT': '1',
+        'Sec-GPC': '1',
+        'Alt-Used': 'indyshare.net',
+        'Connection': 'keep-alive',
+        'Referer': 'https://bestdjsong.com',
+        'Cookie': 'lang=en_US; AppSession=ac71139cf4ace192473c5fc09abc6987; refgoogle=MDliMmM2NmViNDkzMTU1MGQxNDBlMDU3NjNlMzY2OTI5MjA3ZmE1N2E0MmM2YjQ4ZWZmNTIyMDhhZmY1ZjIwMhs04aRV%2BwXzCcFiQAoTLig4b0g7jcDquDf19NvKscUcNEnVVUyDwlK6fRo18ajW8Q%3D%3D; csrfToken=139f870c4f53aa3e5f6304d76dcf558da1cf7b1cf9b60f2d64c27fc82038f383f4249e543ef89de1b714f83fdc71089a629bb4e637272609f0c2b1bd9512d2e8; app_visitor=Q2FrZQ%3D%3D.MzFmZTMxMDU3NzFlMzVlZDc1ODc0YWJlMjJhMTkwYzJmYmYwMzNhODU4NDhmMjRhMjQ4NmRkZTMxMDdkYjU1OBJwKZxB2l5NIVK%2FM1t77xc60%2Fl9OGbDoHRwzu8zwChCaacAYs8ju3dtJbldFFp75%2BwQz69qNxusu4uP0sOGlKV6qwGSwiwdhkrV3gPu%2Bhse; ab=2',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-origin'
+    }
 
     resp = client.get(final_url, headers=headers)
     soup = BeautifulSoup(resp.content, "html.parser")
     inputs = soup.find_all("input")
     data = {input.get("name"): input.get("value") for input in inputs}
-    headers = {"X-Requested-With": "XMLHttpRequest"}
 
     time.sleep(5)  # You may want to adjust the sleep time according to your needs
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=headers)
@@ -2039,6 +2059,7 @@ def indyshare(url):
     except Exception as e:
         print(f"An error occurred: {e}")
         return "Something went wrong :("
+
 
 #####################################################################################################
 # indianshortner
