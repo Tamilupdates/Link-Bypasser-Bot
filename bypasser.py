@@ -2017,25 +2017,28 @@ def tnvalue(url):
 # indyshare
 
 def indyshare(url):
-    client = cloudscraper.create_scraper(allow_brotli=False)
-    DOMAIN = "https://indyshare.net/"
-    url = url[:-1] if url[-1] == "/" else url
+    client = cloudscraper.create_scraper()
+    DOMAIN = "https://indyshare.net"
+    url = url.rstrip('/')  # Remove trailing slash if present
     code = url.split("/")[-1]
     final_url = f"{DOMAIN}/{code}"
-    ref = "https://bestdjsong.com/"
-    h = {"referer": ref}
-    resp = client.get(final_url, headers=h)
+    ref = "https://bestdjsong.com"
+    headers = {"Referer": ref}
+
+    resp = client.get(final_url, headers=headers)
     soup = BeautifulSoup(resp.content, "html.parser")
     inputs = soup.find_all("input")
     data = {input.get("name"): input.get("value") for input in inputs}
-    h = {"x-requested-with": "XMLHttpRequest"}
-    time.sleep(12)
-    r = client.post(f"{DOMAIN}/links/go", data=data, headers=h)
+    headers = {"X-Requested-With": "XMLHttpRequest"}
+
+    time.sleep(12)  # You may want to adjust the sleep time according to your needs
+    r = client.post(f"{DOMAIN}/links/go", data=data, headers=headers)
+
     try:
         return str(r.json()["url"])
-    except BaseException:
+    except Exception as e:
+        print(f"An error occurred: {e}")
         return "Something went wrong :("
-
 
 #####################################################################################################
 # indianshortner
