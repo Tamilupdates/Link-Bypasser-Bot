@@ -2031,7 +2031,7 @@ def indyshare(url):
     data = {input.get("name"): input.get("value") for input in inputs}
     headers = {"X-Requested-With": "XMLHttpRequest"}
 
-    time.sleep(12)  # You may want to adjust the sleep time according to your needs
+    time.sleep(5)  # You may want to adjust the sleep time according to your needs
     r = client.post(f"{DOMAIN}/links/go", data=data, headers=headers)
 
     try:
