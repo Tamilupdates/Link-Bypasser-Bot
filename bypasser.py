@@ -2036,7 +2036,6 @@ def indyshare(url):
         'Alt-Used': 'indyshare.net',
         'Connection': 'keep-alive',
         'Referer': 'https://bestdjsong.com',
-        'Cookie': 'lang=en_US; AppSession=ac71139cf4ace192473c5fc09abc6987; refgoogle=MDliMmM2NmViNDkzMTU1MGQxNDBlMDU3NjNlMzY2OTI5MjA3ZmE1N2E0MmM2YjQ4ZWZmNTIyMDhhZmY1ZjIwMhs04aRV%2BwXzCcFiQAoTLig4b0g7jcDquDf19NvKscUcNEnVVUyDwlK6fRo18ajW8Q%3D%3D; csrfToken=139f870c4f53aa3e5f6304d76dcf558da1cf7b1cf9b60f2d64c27fc82038f383f4249e543ef89de1b714f83fdc71089a629bb4e637272609f0c2b1bd9512d2e8; app_visitor=Q2FrZQ%3D%3D.MzFmZTMxMDU3NzFlMzVlZDc1ODc0YWJlMjJhMTkwYzJmYmYwMzNhODU4NDhmMjRhMjQ4NmRkZTMxMDdkYjU1OBJwKZxB2l5NIVK%2FM1t77xc60%2Fl9OGbDoHRwzu8zwChCaacAYs8ju3dtJbldFFp75%2BwQz69qNxusu4uP0sOGlKV6qwGSwiwdhkrV3gPu%2Bhse; ab=2',
         'Sec-Fetch-Dest': 'empty',
         'Sec-Fetch-Mode': 'cors',
         'Sec-Fetch-Site': 'same-origin'
