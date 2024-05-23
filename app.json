@@ -73,11 +73,11 @@
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "Basic"
+      "size": "Standard-2x"
     },
     "worker": {
       "quantity": 1,
-      "size": "Basic"
+      "size": "Standard-2x"
     }
   }
 }
