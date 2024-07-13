@@ -1967,9 +1967,9 @@ def mdiskpro(url):
 
 
 #####################################################################################################
-# tnshort
+# tnseries
 
-def tnshort(url):
+def tnseries(url):
     client = cloudscraper.create_scraper(allow_brotli=False)
     DOMAIN = "https://news.sagenews.in/"
     url = url[:-1] if url[-1] == "/" else url
@@ -2395,10 +2395,10 @@ def shortners(url):
         print("entered mdiskpro: ",url)
         return mdiskpro(url)
 
-    # tnshort
-    elif "https://link.tnshort.net/" in url:
-        print("entered tnshort:", url)
-        return tnshort(url)
+    # tnseries
+    elif "https://link.tnshort.net/" in url or "https://tnseries.com/" in url:
+        print("entered tnseries:", url)
+        return tnseries(url)
 
     # tnvalue
     elif "https://link.tnvalue.in/" in url or "https://short.tnvalue.in/" in url:
